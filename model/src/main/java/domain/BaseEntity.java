@@ -9,7 +9,7 @@ import java.util.UUID;
  */
 @Table(name = "base_entity", schema = "public", catalog = "rm_db")
 @MappedSuperclass
-public class BaseEntity implements Identifiable<UUID> {
+public class  BaseEntity implements Identifiable<UUID> {
     protected UUID id;
 
     @Id
