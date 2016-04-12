@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.eyeson_team.tourism_project</groupId>
+        <artifactId>web_app</artifactId>
+        <version>1.0</version>
+    </parent>
+    <description>
+
+    </description>
+    <developers>
+        <developer>
+            <name>saeed.shokoohi</name>
+            <email>saeed.shokuhi@gmail.com</email>
+            <roles>
+                <role>designer</role>
+                <role>major developer</role>
+            </roles>
+        </developer>
+    </developers>
+    <inceptionYear>2015</inceptionYear>
+    <modelVersion>4.0.0</modelVersion>
+
+
+
+    <artifactId>repository</artifactId>
+    <version>1.0.0</version>
+    <properties>
+
+        <!--<spring.version>3.2.5.RELEASE</spring.version>-->
+
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.eyeson_team.tourism_project</groupId>
+            <artifactId>model</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
+
+
+</project>

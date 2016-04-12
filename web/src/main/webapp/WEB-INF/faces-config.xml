@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+              version="2.1">
+
+    <application>
+        <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+        <locale-config>
+            <default-locale>fa</default-locale>
+        </locale-config>
+        <locale-config>
+            <default-locale>fa</default-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>local/rm_rawrule</base-name>
+            <var>msg</var>
+        </resource-bundle>
+
+    </application>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>editPersonnel</from-outcome>
+            <to-view-id>/WEB-INF/Test/personnel/EditPersonnel.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>viewPersonnel</from-outcome>
+            <to-view-id>/WEB-INF/Test/personnel/ViewPersonnel.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>personnelList</from-outcome>
+            <to-view-id>/WEB-INF/Test/personnel/ListPersonnel.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>createPersonnel</from-outcome>
+            <to-view-id>/WEB-INF/Test/personnel/CreatePersonnel.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>editOrgPosition</from-outcome>
+            <to-view-id>/WEB-INF/Test/orgPosition/EditOrgPosition.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>viewOrgPosition</from-outcome>
+            <to-view-id>/WEB-INF/Test/orgPosition/ViewOrgPosition.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>orgPositionList</from-outcome>
+            <to-view-id>/WEB-INF/Test/orgPosition/ListOrgPosition.jsp</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>createOrgPosition</from-outcome>
+            <to-view-id>/WEB-INF/Test/orgPosition/CreateOrgPosition.jsp</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <!--<application>-->
+        <!--<view-handler>javax.faces.application.ViewHandlerWrapper</view-handler>-->
+    <!--</application>-->
+
+</faces-config>
