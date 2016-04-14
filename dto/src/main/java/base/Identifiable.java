@@ -6,7 +6,7 @@
  * Documentation: http://www.jaxio.com/documentation/celerio/
  * Template pack-backend-jpa:src/main/java/domain/support/Identifiable.p.vm.java
  */
-package test;
+package base;
 
 import java.io.Serializable;
 

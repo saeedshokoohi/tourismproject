@@ -1,11 +1,14 @@
-package test;
-
-import base.BaseEntityDto;
+package base;
 
 /**
  * Created by jafar on 4/14/2016.
  */
-public class DestinationDto extends BaseEntityDto {
+
+/**
+ * the place or location where TourismAtrraction
+ * is located
+ */
+public class LocationDto extends BaseEntityDto {
 
     private String name;
 
