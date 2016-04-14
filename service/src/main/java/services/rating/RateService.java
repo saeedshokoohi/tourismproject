@@ -3,9 +3,8 @@ package services.rating;
 import base.AutherDto;
 import base.TourismAttractionInfoDto;
 import base.UserDto;
-import domain.base.Auther;
 import domain.vote.VoteValues;
-import repository.VoteRepository;
+import repository.RatingRepository;
 import vote.TourismAttractionVoteInfoDto;
 import vote.VoteValuesDto;
 
@@ -17,7 +16,7 @@ import javax.inject.Inject;
 public class RateService {
 
     @Inject
-    VoteRepository voteRepository;
+    RatingRepository voteRepository;
     /***
      * submit user vote for an item
      *
