@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Tourism Project Home Page</title>
+    <h:outputStylesheet name="css/searchResultStyle.css"/>
+</h:head>
+
+<h:body>
+    <h:form prependId="false" enctype="multipart/form-data" style="margin-bottom: 0;vertical-align: middle">
+        <p:panel id="formPanel" styleClass="formPanel" style="width: 100%;direction: rtl">
+            <table>
+                <tr>
+                    <td style="padding:0;">
+                        <p:graphicImage url="#{resource['img/resultLogo.png']}"/>
+                    </td>
+                    <td>
+                        <p:inputText value="test"/>
+                        <p:commandLink styleClass="ui-button" action="search" ajax="false">
+                            <div class="searchButtonIcon"/>
+                        </p:commandLink>
+                    </td>
+                </tr>
+            </table>
+        </p:panel>
+        <p:panel id="resultPanelId" styleClass="resultPanel" style="width: 100%;direction: rtl">
+
+        </p:panel>
+    </h:form>
+</h:body>
+</html>

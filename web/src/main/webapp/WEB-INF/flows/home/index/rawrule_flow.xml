@@ -10,7 +10,7 @@
         <on-entry>
             <evaluate expression="entityController.initView()"/>
         </on-entry>
-
+        <transition on="search" to="search"/>
     </view-state>
-
+    <subflow-state id="search" subflow="home/search"/>
 </flow>

@@ -8,8 +8,30 @@
 </h:head>
 
 <h:body>
-    <h:form prependId="false" enctype="multipart/form-data" style="margin-bottom: 0">
-        <p:panel
+    <h:form prependId="false" enctype="multipart/form-data" style="margin-bottom: 0;vertical-align: middle">
+        <p:panel id="formPanel" styleClass="formPanel" style="width: 100%">
+            <div>
+                <table style="width: 500px;margin-bottom: -2px; margin: 0 auto;">
+                    <tr>
+                        <td>
+                            <p:graphicImage url="#{resource['img/search.PNG']}"/>
+                        </td>
+                    </tr>
+                </table>
+                <table style="margin: 0 auto;">
+                    <tr>
+                        <td>
+                            <p:inputText value="t"/>
+                        </td>
+                        <td>
+                            <p:commandLink styleClass="ui-button" action="search" ajax="false">
+                                <div class="searchButtonIcon"/>
+                            </p:commandLink>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </p:panel>
     </h:form>
 </h:body>
 </html>

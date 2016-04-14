@@ -37,6 +37,9 @@ public class TourismAttractionDto extends BaseEntityDto {
     }
 
     public void setLocationDto(LocationDto locationDto) {
+        if(locationDto == null) {
+            locationDto = new LocationDto();
+        }
         this.locationDto = locationDto;
     }
     public TourismAttractionDto(String name) {
