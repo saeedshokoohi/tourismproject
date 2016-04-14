@@ -3,17 +3,27 @@ package services.rating;
 import base.AutherDto;
 import base.TourismAttractionInfoDto;
 import base.UserDto;
+import domain.base.Auther;
 import domain.vote.VoteValues;
 import repository.RatingRepository;
+import repository.UserRepository;
+import util.AverageAlgorithm;
+import util.BayesianAlgorithm;
+import util.RateValue;
 import vote.TourismAttractionVoteInfoDto;
 import vote.VoteValuesDto;
 
 import javax.inject.Inject;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by saeed on 4/14/2016.
  */
 public class RateService {
+
+    @Inject
+    UserRepository userRepository;
 
     @Inject
     RatingRepository voteRepository;
@@ -47,15 +57,27 @@ public class RateService {
 
         //convert dto to model object to save on repository
         VoteValues voteValueModel = convertToVoteModel(vote);
+         Auther auther=convertToAutherModel(infoDto.getAuther());
 
-//        Auther auther=convert
 
         //updating vote rates on repository
         voteRepository.addInfoVoting(infoDto.getId(),voteValueModel);
+        userRepository.updateAutherRate(auther);
+
 
 
 
     }
+
+    /**
+     *
+     * @param auther
+     * @return
+     */
+    private Auther convertToAutherModel(AutherDto auther) {
+        return null;
+    }
+
 
     /**
      * this method change the auther rating level
@@ -72,6 +94,16 @@ public class RateService {
      */
     private void recalculateTotalRank(VoteValuesDto vote) {
 
+        //making average algorithm
+        AverageAlgorithm algorithm=new BayesianAlgorithm();
+
+        double newRank= algorithm.calculate(makeInputList(vote));
+        vote.setTotalRank(newRank);
+
+    }
+
+    private List<RateValue> makeInputList(VoteValuesDto vote) {
+        return null;
     }
 
     /**
