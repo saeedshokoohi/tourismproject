@@ -3,6 +3,7 @@ package services.rating;
 import base.AutherDto;
 import base.TourismAttractionInfoDto;
 import base.UserDto;
+import domain.base.Auther;
 import domain.vote.VoteValues;
 import repository.VoteRepository;
 import vote.TourismAttractionVoteInfoDto;
@@ -45,10 +46,13 @@ public class RateService {
         //on changing the rate changed on his info
         upgradeInfoAutherRating(infoDto.getAuther(),vote);
 
-
+        //convert dto to model object to save on repository
         VoteValues voteValueModel = convertToVoteModel(vote);
 
-        voteRepository.addInfoVoting(infoDto.getId(),vote.getOneStarCount(),voteValueModel);
+//        Auther auther=convert
+
+        //updating vote rates on repository
+        voteRepository.addInfoVoting(infoDto.getId(),voteValueModel);
 
 
 
