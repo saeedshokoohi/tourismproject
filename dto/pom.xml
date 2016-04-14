@@ -34,7 +34,11 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.eyeson_team.tourism_project</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
 

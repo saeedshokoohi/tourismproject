@@ -40,6 +40,11 @@
             <artifactId>model</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.eyeson_team.tourism_project</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
 
