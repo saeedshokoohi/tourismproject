@@ -15,7 +15,7 @@ import javax.inject.Named;
  * Created by peyman on 4/14/2016.
  */
 @Named
-public class CategoryDtoConverter implements Converter {
+public class categoryDtoConverter implements Converter {
     @Inject
     CategoryService categoryService;
 

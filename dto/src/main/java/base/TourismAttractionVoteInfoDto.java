@@ -1,6 +1,4 @@
-package vote;
-
-import base.TourismAttractionInfoDto;
+package base;
 
 /**
  * Created by saeed on 4/14/2016.

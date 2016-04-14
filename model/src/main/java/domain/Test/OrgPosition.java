@@ -1,6 +1,6 @@
 package domain.Test;
 
-import domain.BaseEntity;
+import domain.base.BaseEntity;
 
 import javax.persistence.*;
 

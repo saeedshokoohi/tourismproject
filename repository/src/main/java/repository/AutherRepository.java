@@ -10,10 +10,12 @@ import java.util.UUID;
 /**
  * Created by saeed on 4/14/2016.
  */
-public class UserRepository extends GenericRepository<User> {
+public class AutherRepository extends GenericRepository<Auther> {
     public void addInfoVoting(UUID id, VoteValues voteValueModel) {
 
     }
 
+    public void updateAutherRate(Auther auther) {
 
+    }
 }

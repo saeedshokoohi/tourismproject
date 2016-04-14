@@ -4,18 +4,18 @@ import base.AutherDto;
 import base.TourismAttractionInfoDto;
 import base.UserDto;
 import domain.base.Auther;
-import domain.vote.VoteValues;
+import domain.base.VoteValues;
+import repository.AutherRepository;
 import repository.RatingRepository;
 import repository.UserRepository;
 import util.AverageAlgorithm;
 import util.BayesianAlgorithm;
 import util.RateValue;
-import vote.TourismAttractionVoteInfoDto;
-import vote.VoteValuesDto;
+import base.TourismAttractionVoteInfoDto;
+import base.VoteValuesDto;
 
 import javax.inject.Inject;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * Created by saeed on 4/14/2016.
@@ -23,7 +23,7 @@ import java.util.UUID;
 public class RateService {
 
     @Inject
-    UserRepository userRepository;
+    AutherRepository userRepository;
 
     @Inject
     RatingRepository voteRepository;
@@ -113,11 +113,11 @@ public class RateService {
      */
     private VoteValues convertToVoteModel(VoteValuesDto vote) {
         VoteValues retVoteValues=new VoteValues();
-        retVoteValues.setOneStarCount(vote.getOneStarCount());
-        retVoteValues.setTwoStarCount(vote.getTwoStarCount());
-        retVoteValues.setThreeStarCount(vote.getThreeStarCount());
-        retVoteValues.setFourStarCount(vote.getFourStarCount());
-        retVoteValues.setFiveStarCount(vote.getFiveStarCount());
+        retVoteValues.setRate1(vote.getOneStarCount());
+        retVoteValues.setRate2(vote.getTwoStarCount());
+        retVoteValues.setRate3(vote.getThreeStarCount());
+        retVoteValues.setRate4(vote.getFourStarCount());
+        retVoteValues.setRate5(vote.getFiveStarCount());
 return  retVoteValues;
     }
 

@@ -1,18 +1,12 @@
 package repository.support;
 
 
-import domain.BaseEntity;
 import domain.Identifiable;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.*;
-import java.applet.AppletContext;
-import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 

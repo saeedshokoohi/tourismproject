@@ -16,9 +16,9 @@
     <!--<bean id="studentController"  class="net.javabeat.managedController.StudentController" name="studentController"/>-->
     <!-- Data Source Declaration -->
     <bean id="DataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-        <property name="url" value="jdbc:postgresql://localhost:5432/tourism"></property>
+        <property name="url" value="jdbc:postgresql://198.143.180.116:5432/tourism"></property>
         <property name="username" value="postgres"/>
-        <property name="password" value="postgres"/>
+        <property name="password" value="root"/>
         <property name="driverClassName" value="org.postgresql.Driver"/>
 
 

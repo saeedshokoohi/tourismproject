@@ -1,4 +1,4 @@
-package vote;
+package base;
 
 import util.RateValue;
 

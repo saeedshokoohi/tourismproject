@@ -1,4 +1,4 @@
-package vote;
+package base;
 
 /**
  * Created by saeed on 4/14/2016.

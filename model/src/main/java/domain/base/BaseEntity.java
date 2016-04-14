@@ -1,4 +1,6 @@
-package domain;
+package domain.base;
+
+import domain.Identifiable;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlTransient;
@@ -11,7 +13,7 @@ import java.util.UUID;
 @MappedSuperclass
 public class  BaseEntity implements Identifiable<UUID> {
     protected UUID id;
-
+    protected String name;
     @Id
     @Column(name = "id", nullable = false)
     @org.hibernate.annotations.Type(type="pg-uuid")
@@ -21,6 +23,16 @@ public class  BaseEntity implements Identifiable<UUID> {
 
     public void setId(UUID id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name = "name", nullable = true, length = 255)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override

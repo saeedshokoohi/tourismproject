@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="persistenceUnit">
+        <class>domain.base.Auther</class>
+        <class>domain.base.TourismAttraction</class>
+        <class>domain.base.TourismAttractionInfo</class>
+        <class>domain.base.User</class>
+        <class>domain.base.VoteValues</class>
+        <class>domain.base.Category</class>
+        <class>domain.base.InfoReference</class>
+        <class>domain.base.Location</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:postgresql://198.143.180.116:5432/tourism"/>
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>
+            <property name="hibernate.connection.username"/>
+            <property name="hibernate.connection.password"/>
+        </properties>
+    </persistence-unit>
+</persistence>
