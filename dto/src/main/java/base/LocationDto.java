@@ -19,4 +19,11 @@ public class LocationDto extends BaseEntityDto {
     public void setName(String name) {
         this.name = name;
     }
+
+    public LocationDto(String name) {
+        this.name = name;
+    }
+
+    public LocationDto() {
+    }
 }

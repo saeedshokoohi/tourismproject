@@ -1,18 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-<h:head><title>Tourism Project Home Page</title>
-
+<h:head>
+    <title>Tourism Project Home Page</title>
+    <h:outputStylesheet name="css/rm_style.css"/>
 </h:head>
 
 <h:body>
-
-    <h:form prependId="false" enctype="multipart/form-data">
-
-        <p:panel header="Eyes-On Team" ></p:panel>
-      <p:graphicImage url="../img/logo.png"/>
+    <h:form prependId="false" enctype="multipart/form-data" style="margin-bottom: 0">
+        <p:panel styleClass="formPanel">
+            <table style="margin-right: -50px">
+                <tr>
+                    <td>
+                        <p:graphicImage url="#{resource['img/plus.png']}" style="margin-top: 5px"/>
+                    </td>
+                    <td>
+                        <p:outputLabel value="#{msgUtil.getProperty('tourismInfoSave')}"/>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        <p:outputLabel value="#{msgUtil.getProperty('categoryName')}"/>
+                    </td>
+                    <td>
+                        <p:outputLabel value="#{msgUtil.getProperty('location')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p:autoComplete value="#{tourismAttractionDto.categoryDto}"
+                                        effect="fade"
+                                        completeMethod="#{entityController.categoryComplete}"
+                                        var="item" itemLabel="#{item.title}"
+                                        itemValue="#{item.title}" converter="#{CategoryDtoConverter}"/>
+                    </td>
+                    <td>
+                        <p:autoComplete value="#{tourismAttractionDto.locationDto}"
+                                        effect="fade"
+                                        completeMethod="#{entityController.locationDtoComplete}"
+                                        var="item" itemLabel="#{item.name}"
+                                        itemValue="#{item.name}" converter="#{LocationDtoConverter}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p:outputLabel value="#{msgUtil.getProperty('tourismAttraction')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p:autoComplete value="#{tourismAttractionDto.name}"
+                                        effect="fade"
+                                        completeMethod="#{entityController.tourismAttractionDtoComplete}"
+                                        var="item" itemLabel="#{item.name}"
+                                        itemValue="#{item.name}" converter="#{TourismAttractionDtoConverter}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p:outputLabel value="#{msgUtil.getProperty('info')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p:inputTextarea value="#{tourismAttractionInfoDto.detail}" style="width: 100%"/>
+                    </td>
+                </tr>
+               <tr>
+                   <td colspan="2">
+                       <p:outputLabel value="#{msgUtil.getProperty('reference')}"/>
+                   </td>
+               </tr>
+                 <tr>
+                   <td colspan="2">
+                       <p:inputText value="#{tourismAttractionInfoDto.infoReferenceDto}"/>
+                   </td>
+               </tr>
+                <tr>
+                    <td dir="ltr" colspan="2">
+                        <p:commandButton value="submit"/>
+                    </td>
+                </tr>
+            </table>
+        </p:panel>
+        <style type="text/css">
+            body {
+                background-image: url("#{resource['img/33pol.jpg']}");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+        </style>
     </h:form>
 </h:body>
-</html> 
+</html>

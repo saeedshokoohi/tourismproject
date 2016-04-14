@@ -3,10 +3,14 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
-
+    <var name="entityController" class="controller.inputForm.InputFormController"/>
+    <var name="tourismAttractionDto" class="base.TourismAttractionDto"/>
+    <var name="tourismAttractionInfoDto" class="base.TourismAttractionInfoDto"/>
     <view-state id="home" view="/WEB-INF/flows/home/index/index.xhtml">
+        <on-entry>
+            <evaluate expression="entityController.initView()"/>
+        </on-entry>
 
-
-</view-state>
+    </view-state>
 
 </flow>
