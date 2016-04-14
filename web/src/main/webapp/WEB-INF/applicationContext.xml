@@ -89,7 +89,9 @@
     <bean name="resources" class="org.springframework.context.support.ResourceBundleMessageSource">
         <property name="defaultEncoding" value="UTF-8"/>
         <property name="useCodeAsDefaultMessage" value="true"/>
-
+        <property name="basename">
+            <value>bundle.local</value>
+        </property>
     </bean>
     <bean name="msgUtil" class="util.ResourcesUtil">
         <property name="msg" ref="resources">

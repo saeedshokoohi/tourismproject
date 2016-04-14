@@ -5,7 +5,16 @@ package base; /**
 /**
  * this dto is sttended to user info
  */
-public class UserDto {
+public class UserDto extends AutherDto {
 
 
+    private double userRankLevel;
+
+    public double getUserRankLevel() {
+        return userRankLevel;
+    }
+
+    public void setUserRankLevel(double userRankLevel) {
+        this.userRankLevel = userRankLevel;
+    }
 }

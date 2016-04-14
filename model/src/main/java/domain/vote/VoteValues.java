@@ -1,25 +1,15 @@
-package vote;
+package domain.vote;
 
 /**
  * Created by saeed on 4/14/2016.
  */
-public class VoteValuesDto {
+public class VoteValues {
 
     double OneStarCount;
     double TwoStarCount;
     double ThreeStarCount;
     double FourStarCount;
-    double TotalRank;
     double FiveStarCount;
-
-
-    public double getTotalRank() {
-        return TotalRank;
-    }
-
-    public void setTotalRank(double totalRank) {
-        TotalRank = totalRank;
-    }
 
     public double getOneStarCount() {
         return OneStarCount;

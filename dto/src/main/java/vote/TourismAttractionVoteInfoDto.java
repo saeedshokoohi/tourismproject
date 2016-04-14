@@ -6,7 +6,7 @@ import base.TourismAttractionInfoDto;
  * Created by saeed on 4/14/2016.
  */
 
-public class TourismAttractionVoteInfo {
+public class TourismAttractionVoteInfoDto {
     /**
      * the item which has been voted
      */
