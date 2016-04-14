@@ -14,7 +14,7 @@
             <supported-locale>en</supported-locale>
         </locale-config>
         <resource-bundle>
-            <base-name>local/rm_rawrule</base-name>
+            <base-name>bundle/local</base-name>
             <var>msg</var>
         </resource-bundle>
 
