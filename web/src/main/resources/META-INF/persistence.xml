@@ -7,9 +7,14 @@
     <persistence-unit  name="punit" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <!--<class >domain.base.BaseEntity</class>-->
-
-        <class >domain.Test.Personnel</class>
-        <class >domain.Test.OrgPosition</class>
+        <class>domain.base.TourismAttraction</class>
+        <class>domain.base.Auther</class>
+        <class>domain.base.VoteValues</class>
+        <class>domain.base.Location</class>
+        <class>domain.base.TourismAttractionInfo</class>
+        <class>domain.base.Category</class>
+        <class>domain.base.User</class>
+        <!--<exclude-unlisted-classes>true</exclude-unlisted-classes>-->
         <properties>
 
         <!--    <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/rm_db"/>
