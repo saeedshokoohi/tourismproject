@@ -21,10 +21,10 @@
                 <table style="margin: 0 auto;">
                     <tr>
                         <td>
-                            <p:inputText value="t"/>
+                            <p:inputText id="ddd" value="#{searchPojo.param}"/>
                         </td>
                         <td>
-                            <p:commandLink styleClass="ui-button" action="search" ajax="false">
+                            <p:commandLink styleClass="ui-button" action="#{controller.search}" ajax="false">
                                 <div class="searchButtonIcon"/>
                             </p:commandLink>
                         </td>

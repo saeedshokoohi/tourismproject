@@ -25,7 +25,9 @@
             </table>
         </p:panel>
         <p:panel id="resultPanelId" styleClass="resultPanel" style="width: 100%;direction: rtl">
-
+            <h:dataTable value="#{flowScope.resultList}" var="item">
+                <p:outputLabel value="#{item.name}"/>
+            </h:dataTable>
         </p:panel>
     </h:form>
 </h:body>

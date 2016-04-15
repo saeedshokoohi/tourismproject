@@ -35,8 +35,8 @@
                         <p:autoComplete value="#{tourismAttractionDto.categoryDto}"
                                         effect="fade"
                                         completeMethod="#{entityController.categoryComplete}"
-                                        var="item" itemLabel="#{item.title}"
-                                        itemValue="#{item.title}" converter="#{CategoryDtoConverter}"/>
+                                        var="item" itemLabel="#{item.name}"
+                                        itemValue="#{item.name}" converter="#{CategoryDtoConverter}"/>
                     </td>
                     <td>
                         <p:autoComplete value="#{tourismAttractionDto.locationDto}"
@@ -67,7 +67,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <p:inputTextarea value="#{tourismAttractionInfoDto.detail}" style="width: 100%"/>
+                        <p:inputTextarea value="#{tourismAttractionInfoDto.name}" style="width: 100%"/>
                     </td>
                 </tr>
                <tr>

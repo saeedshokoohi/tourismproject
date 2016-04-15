@@ -2,8 +2,11 @@ package services;
 
 import base.LocationDto;
 import base.TourismAttractionDto;
+import domain.base.TourismAttraction;
+import repository.TourismAttractionRepository;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -16,6 +19,8 @@ import java.util.List;
 public class TourismAttractionService implements Serializable {
     List<TourismAttractionDto> tourismAttractionDtos = new ArrayList<TourismAttractionDto>();
 
+    @Inject
+    TourismAttractionRepository tourismAttractionRepository;
     public List<TourismAttractionDto> getTourismAttractionDtos() {
         return tourismAttractionDtos;
     }
@@ -46,4 +51,7 @@ public class TourismAttractionService implements Serializable {
         return returnTourismAttractionDtoList;
     }
 
+    public List<TourismAttraction> search(String param) {
+        return tourismAttractionRepository.search(param);
+    }
 }
