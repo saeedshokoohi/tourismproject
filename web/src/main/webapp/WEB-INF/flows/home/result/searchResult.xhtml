@@ -31,9 +31,12 @@
             </table>
         </p:panel>
         <p:panel id="resultPanelId" styleClass="resultPanel" style="width: 100%;direction: rtl">
-            <h:dataTable value="#{resultPojo.tourismAttractionDtoList}" var="item">
+            <h:dataTable value="#{resultPojo.tourismAttractionDtoList}" style="width:100%;" var="item">
                 <p:column>
+                    <p:panel styleClass="resultItem">
                     <p:outputLabel value="#{item.name}"/>
+                    </p:panel>
+                    <!--<div class="lineClass"/>-->
                 </p:column>
             </h:dataTable>
         </p:panel>

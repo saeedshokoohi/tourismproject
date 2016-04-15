@@ -1,4 +1,6 @@
+
 .formPanel{
+    font-family: yekan;
     padding: 0;
     margin: 0;
 
@@ -34,4 +36,18 @@
 }
 #resultPanelId_content{
     padding: 0;
+}
+.resultItem{
+    width: 100%;
+    background-color: aliceblue;
+    border: 1px solid darkgray;
+    margin-bottom: 3px;
+}
+.lineClass{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 1px;
+    background-color: darkgray;
+    border: 0;
 }
