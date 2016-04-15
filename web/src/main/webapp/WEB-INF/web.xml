@@ -72,7 +72,7 @@
 
     <!-- Welcome page -->
     <welcome-file-list>
-        <welcome-file>app/home/index</welcome-file>
+        <welcome-file>app/home/search</welcome-file>
     </welcome-file-list>
     <context-param>
         <description>Use JSF view templates saved as *.xhtml, for use with Facelets</description>
