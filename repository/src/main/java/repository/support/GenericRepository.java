@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Named;
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,7 +15,7 @@ import java.util.UUID;
  * Created by saeed on 13/12/2015.
  */
 @Named
-public class GenericRepository<E extends Identifiable<UUID>> {
+public class GenericRepository<E extends Identifiable<UUID>>  {
 
     protected Class<E> type;
 //    @PersistenceContext(name="punit")

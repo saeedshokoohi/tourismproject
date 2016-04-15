@@ -8,15 +8,21 @@
 </h:head>
 
 <h:body>
+    <style type="text/css">
+        body{
+            font-family: yekan !important;
+        }
+
+    </style>
     <h:form prependId="false" enctype="multipart/form-data" style="margin-bottom: 0;vertical-align: middle">
         <p:panel id="header" styleClass="headerPanel" style="width: 100%">
             <table>
                 <tr>
                     <td>
-                        <p:commandButton value="ورود دستی اطلاعات" />
+                        <p:commandButton action="manualAdd" value="ورود دستی اطلاعات" />
                     </td>
                     <td>
-                        <p:commandButton value="ورود خودکار اطلاعات"/>
+                        <p:commandButton action="autoAdd" value="ورود خودکار اطلاعات"/>
                     </td>
                 </tr>
             </table>

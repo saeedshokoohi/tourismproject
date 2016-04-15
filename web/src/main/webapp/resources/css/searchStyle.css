@@ -4,7 +4,10 @@ body{
     background-color: white;
     font-size: 100pt;
 }
-
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: yekan Tahoma;
+    font-size: 1em;
+}
 .formPanel{
     width: 100%;
     text-align: center;
@@ -41,4 +44,10 @@ body{
     width: 96px;
     height: 47px;
     margin-top: -2px;
+}
+@font-face {
+    font-family: 'yekan';
+    src:url("../fonts/BYekan.eot?#") format("eot"),
+    url('../fonts/BYekan.woff') format('woff'),
+    url('../fonts/BYekan.ttf') format('truetype');
 }

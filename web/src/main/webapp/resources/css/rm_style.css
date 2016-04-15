@@ -1,6 +1,6 @@
 body{
     direction: rtl;
-    font-family: yekan;
+    font-family: yekan !important;
     background-color: beige;
     font-size: 100pt;
 }

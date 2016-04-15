@@ -19,7 +19,7 @@
     <name>Tourism Web-Based Project  </name>
 	<url>http://maven.apache.org</url>
     <properties>
-            <spring.version>4.2.3.RELEASE</spring.version>
+            <spring.version>4.1.0.RELEASE</spring.version>
         </properties>
 	<repositories>
 		<repository>
@@ -220,6 +220,16 @@
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache</artifactId>
             <version>2.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>xml-apis</groupId>
+            <artifactId>xml-apis</artifactId>
+            <version>1.4.01</version>
+        </dependency>
+        <dependency>
+            <groupId>com.eyeson</groupId>
+            <artifactId>webcrawler</artifactId>
+            <version>1.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 	<build>

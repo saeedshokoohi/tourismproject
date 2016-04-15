@@ -26,7 +26,7 @@ public class  BaseEntity implements Identifiable<UUID> {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = 255)
+    @Column(name = "name", nullable = true, length = 1000000)
     public String getName() {
         return name;
     }

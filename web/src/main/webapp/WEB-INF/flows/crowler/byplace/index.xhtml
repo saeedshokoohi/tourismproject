@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Tourism Project Home Page</title>
+    <h:outputStylesheet name="css/rm_style.css"/>
+</h:head>
+
+<h:body>
+    <style type="text/css">
+        body{
+            font-family: yekan !important;
+        }
+
+    </style>
+    <h:form prependId="false" enctype="multipart/form-data" style="margin-bottom: 0">
+
+        <p:panel styleClass="formPanel">
+            <table style="margin-right: -50px">
+                <tr>
+
+                    <td>
+                     ورود اتوماتیک داده های گردش گری
+                    </td>
+                    <td>
+                        <p:messages></p:messages>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%">
+                <tr>
+
+                    <td>
+                        <p:outputLabel value="#{msgUtil.getProperty('location')}"/>
+                        <p:autoComplete value="#{entityController.selectedPlace}"
+                                        effect="fade"
+                                        completeMethod="#{entityController.locationDtoComplete}"
+                                        var="item" itemLabel="#{item}"
+                                        itemValue="#{item}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td dir="ltr" colspan="2">
+                        <p:commandButton ajax="false" action="#{entityController.importData()}" value="ثبت"/>
+                    </td>
+                </tr>
+            </table>
+        </p:panel>
+        <style type="text/css">
+            body {
+                background-image: url("#{resource['img/33pol.jpg']}");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
+        </style>
+    </h:form>
+</h:body>
+</html>

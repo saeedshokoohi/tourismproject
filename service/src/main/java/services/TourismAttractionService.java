@@ -11,6 +11,7 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by peyman on 4/14/2016.
@@ -51,6 +52,17 @@ public class TourismAttractionService implements Serializable {
         return returnTourismAttractionDtoList;
     }
 
+    public void saveAtractionList(List<TourismAttractionDto> retList) {
+        if(retList!=null)
+        for(TourismAttractionDto tar:retList)
+        {
+            TourismAttraction tatr=new TourismAttraction();
+            tatr.setId(UUID.randomUUID());
+            tatr.setName(tar.getName());
+            tourismAttractionRepository.save(tatr);
+
+        }
+    }
     public List<TourismAttraction> search(String param) {
         return tourismAttractionRepository.search(param);
     }
