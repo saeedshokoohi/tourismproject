@@ -16,17 +16,25 @@
                         <p:graphicImage url="#{resource['img/resultLogo.png']}"/>
                     </td>
                     <td>
-                        <p:inputText value="test"/>
-                        <p:commandLink styleClass="ui-button" action="search" ajax="false">
+                        <p:inputText value="#{searchPojo.param}"/>
+                        <p:commandLink styleClass="ui-button" action="#{controller.search}" ajax="false">
                             <div class="searchButtonIcon"/>
                         </p:commandLink>
+                    </td>
+                    <td>
+                        <p:commandButton value="ورود دستی اطلاعات" />
+                    </td>
+                    <td>
+                        <p:commandButton value="ورود خودکار اطلاعات"/>
                     </td>
                 </tr>
             </table>
         </p:panel>
         <p:panel id="resultPanelId" styleClass="resultPanel" style="width: 100%;direction: rtl">
-            <h:dataTable value="#{flowScope.resultList}" var="item">
-                <p:outputLabel value="#{item.name}"/>
+            <h:dataTable value="#{resultPojo.tourismAttractionDtoList}" var="item">
+                <p:column>
+                    <p:outputLabel value="#{item.name}"/>
+                </p:column>
             </h:dataTable>
         </p:panel>
     </h:form>
